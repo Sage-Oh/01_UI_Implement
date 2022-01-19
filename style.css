@@ -10,7 +10,7 @@
 
   /* Font size */
   --font-large: 48px;
-  --font-medium: 28px;
+  --font-medium: 24px;
   --font-regular: 18px;
   --font-small: 16px;
   --font-micro: 14px;
@@ -129,7 +129,13 @@ button{
 /* Main */
 
 #main{
-  padding: 97px 0 100px 0;
+  width: 100%;
+  height: 1000px;
+  
+}
+
+.main__pic{
+  height: 500px;
 }
 
 .pic__back {
@@ -137,38 +143,65 @@ button{
   width: 100%;
   height: 500px;
   opacity: 0.5;
-  position: absolute;
+  position: relative;
   top: 97px;
   left: 0;
 }
 
 .pic__front{
   position: relative;
-  top: 90px;
+  top: -300px;
   left: 185px;
   object-fit: cover;
   width: 85%;
   height: 500px;
 }
-.main__pic > h1 {
-  color: var(--color-white);
-  top: 200px;
-  left: 700px;
-}
+
 .main__pic button {
-  
-  top: 350px;
-  left: 750px;
+  display: block;
+  position: relative;
+  top: -550px;
+  left: 920px;
+  border: 1px solid var(--color-white);
+  background-color: var(--color-ligth-grey);
+  font-size: var(--font-large);
+  color: var(--color-white);
+  font-weight: lighter;
+  padding: 20px 45px;
+  border-radius: 10px;
+}
+
+
+.main__pic button:hover {
+  background-color: var(--color-navy);
 }
 
 .main__util{
-  
-  top: 145px;
+  position: relative;
+  top: 260px;
   left: 0px;
+  background-color: rgb(107,107,107,0.5);
+  padding: 20px 45px;
+  font-size: var(--font-medium);
   display: flex;
-  
+  justify-content: space-between;
+  align-items: center;
 }
 
 .main__util a {
   color: var(--color-black);
 }
+
+.main__util>ul {
+  display: flex;
+  justify-content: space-between;
+}
+.main__util li {
+  padding: 10px 20px;
+}
+
+/* map */
+#map{
+  border: 1px solid red;
+}
+
