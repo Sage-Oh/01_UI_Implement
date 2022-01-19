@@ -6,6 +6,7 @@
   --color-black: #000000;
   --color-yellow: #ffee38;
   --color-orange: #feb546;
+  --color-navy: #1a237e;
 
   /* Font size */
   --font-large: 48px;
@@ -28,6 +29,19 @@
   box-sizing: border-box;
 }
 
+body{
+  margin:0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+  padding-left: 0;
+}
+
 /* Typograhpy */
 h1 {
   font-size: var(--font-large);
@@ -39,7 +53,7 @@ h1 {
 
 
 h2{
-  font-size: var(--font-regular);
+  font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 8px 0;
@@ -58,4 +72,103 @@ p{
   font-weight: var(--weight-regular);
   color: var(--color-black);
   margin: 4px 0;
+}
+
+button{
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Navbar */
+#navbar{
+  display: flex;
+  background-color: var(--color-black);
+  align-items: center;
+  padding: 13px 40px;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+
+  
+}
+
+#navbar a{
+  color: var(--color-white);
+  font-size: var(--font-medium);
+
+}
+
+
+.navbar__menu{
+  display: flex;
+  margin-left: 30px;
+}
+
+.navbar__menu>li {
+  padding:10px 20px;
+}
+
+.navbar_menu_2{
+  display: none;
+}
+
+.navbar__btn{
+  margin-left: auto;
+}
+
+.navbar__btn button{
+  font-size: var(--font-regular);
+  color: var(--color-white);
+  padding: 10px;
+  border: 1px yellow solid;
+
+}
+
+/* Main */
+
+#main{
+  padding: 97px 0 100px 0;
+}
+
+.pic__back {
+  object-fit: cover;
+  width: 100%;
+  height: 500px;
+  opacity: 0.5;
+  position: absolute;
+  top: 97px;
+  left: 0;
+}
+
+.pic__front{
+  position: relative;
+  top: 90px;
+  left: 185px;
+  object-fit: cover;
+  width: 85%;
+  height: 500px;
+}
+.main__pic > h1 {
+  color: var(--color-white);
+  top: 200px;
+  left: 700px;
+}
+.main__pic button {
+  
+  top: 350px;
+  left: 750px;
+}
+
+.main__util{
+  
+  top: 145px;
+  left: 0px;
+  display: flex;
+  
+}
+
+.main__util a {
+  color: var(--color-black);
 }
