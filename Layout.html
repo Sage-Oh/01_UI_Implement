@@ -138,35 +138,51 @@
   </section>
   <!-- map -->
   <section id="map">
-    <p>맵 살펴보기</p>
+    <div>맵 살펴보기</div>
     <div class="slide__wrapper">
-      <ul class="slides">
-        <li>
-          태이고
-          <img src="imgs/taego.jpeg" alt="태이고 맵 이미지">
-        </li>
-        <li>
-          사녹
-          <img src="imgs/사녹.jpeg" alt="사녹 맵 이미지">
-        </li>
-        <li>
-          비켄디
-          <img src="imgs/비켄디.jpeg" alt="비켄디 맵 이미지">
-        </li>
-        <li>
-          에란겔
-          <img src="imgs/에란겔.jpeg" alt="에란겔 맵 이미지">
-        </li>
-        <li>
-          카라킨
-          <img src="imgs/카라킨.jpeg" alt="카라킨 맵 이미지">
-        </li>
-      </ul>
+
+      <button class="prev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <div class="slides_container">
+        <ul class="slides">
+          <li>
+            태이고
+            <img src="imgs/taego.jpeg" alt="태이고 맵 이미지">
+          </li>
+          <li>
+            사녹
+            <img src="imgs/사녹.jpeg" alt="사녹 맵 이미지">
+          </li>
+          <li>
+            비켄디
+            <img src="imgs/비켄디.jpeg" alt="비켄디 맵 이미지">
+          </li>
+          <li>
+            에란겔
+            <img src="imgs/에란겔.jpeg" alt="에란겔 맵 이미지">
+          </li>
+          <li>
+            카라킨
+            <img src="imgs/카라킨.jpeg" alt="카라킨 맵 이미지">
+          </li>
+        </ul>
+      </div>
+      
+      <button class="next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
-    <div class="map__btn">
-      <button class="prev">prev</button>
-      <button class="next">next</button>
+
+    <div class="indicator">
+      <a href="" class="active"><i class="fas fa-circle"></i></a>
+      <a href=""><i class="fas fa-circle"></i></a>
+      <a href=""><i class="fas fa-circle"></i></a>
+      <a href=""><i class="fas fa-circle"></i></a>
+      <a href=""><i class="fas fa-circle"></i></a>
     </div>
+    
   </section>
   <!-- playMode -->
   <section id="playModes">
@@ -204,7 +220,7 @@
         SMG <span>3</span>
       </button>
       <button class="category__btn">
-        샷건 <span>4</span>
+        샷건 <span></span>
       </button>
     </div>
 
@@ -271,8 +287,8 @@
   </section>
   <!-- footer -->
   <footer>
-    <div><h1>kakaogames</h1></div>
-    <div><h1>KRAFTON</h1></div>
+    <h1>kakaogames</h1>
+    <h1>KRAFTON</h1>
     <div>
       <ul>
         <li><a href="">서비스 약관/정책</a></li>
