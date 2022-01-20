@@ -13,8 +13,7 @@
   <nav id="navbar">
     <div class="navbar__logo">
       <a href="#">
-        <i class="fas fa-trophy"></i>
-        BATTLEGROUNDS
+        <img src="imgs/pubg.png" alt="">
       </a>
     </div>
     <ul class="navbar__menu">
@@ -76,6 +75,7 @@
     </div>
   </nav>
   <!-- main -->
+  <!-- 여기 백그라운드 div 를 리스트 div 위에 다른 div 를 줘서 고런 형태로 만들어보기 -->
   <section id="main">
     <div class="main__pic">
         <video src="imgs/sample.mp4" autoplay muted loop 
@@ -138,55 +138,73 @@
   </section>
   <!-- map -->
   <section id="map">
-    <h1 class="navigation">맵 보기</h1>
-    <div class="map__imgs">
-      <input type="radio" name="tabmap" id="map01" checked>
-      <input type="radio" name="tabmap" id="map02">
-      <input type="radio" name="tabmap" id="map03">
-      <div class="map01"><img src="imgs/taego.jpeg" alt="태이고 맵 이미지"></div>
-      <div class="map02"><img src="imgs/사녹.jpeg" alt="사녹 맵 이미지"></div>
-      <div class="map03"><img src="imgs/비켄디.jpeg" alt="비켄디 맵 이미지"></div>
+    <p>맵 살펴보기</p>
+    <div class="slide__wrapper">
+      <ul class="slides">
+        <li>
+          태이고
+          <img src="imgs/taego.jpeg" alt="태이고 맵 이미지">
+        </li>
+        <li>
+          사녹
+          <img src="imgs/사녹.jpeg" alt="사녹 맵 이미지">
+        </li>
+        <li>
+          비켄디
+          <img src="imgs/비켄디.jpeg" alt="비켄디 맵 이미지">
+        </li>
+        <li>
+          에란겔
+          <img src="imgs/에란겔.jpeg" alt="에란겔 맵 이미지">
+        </li>
+        <li>
+          카라킨
+          <img src="imgs/카라킨.jpeg" alt="카라킨 맵 이미지">
+        </li>
+      </ul>
     </div>
     <div class="map__btn">
-      <label for="map01">태이고</label>
-      <label for="map02">사녹</label>
-      <label for="map03">비켄디</label>
+      <button class="prev">prev</button>
+      <button class="next">next</button>
     </div>
   </section>
   <!-- playMode -->
   <section id="playModes">
-    <div class="navigation">플레이모드</div>
-    <div class="mode">
-      <div class="mode__img"><img src="imgs/아케이드모드.png" alt=""></div>
-      <div class="mode__title">아케이드 모드</div>
-      <div class="mode__description">워 모드, 캐쥬얼 모드, 스나이퍼 매치, 극한 매치, 하드코어 모드 등 즐겨보세요</div>
-    </div>
-    <div class="mode">
-      <div class="mode__img"><img src="imgs/서바이벌모드.png" alt=""></div>
-      <div class="mode__title">서바이벌 모드</div>
-      <div class="mode__description">팀 데스매치, 서바이벌 모드를 통해 어쩌구 ~</div>
-    </div>
-    <div class="mode">
-      <div class="mode__img"><img src="imgs/테마모드.jpeg" alt=""></div>
-      <div class="mode__title">테마 모드</div>
-      <div class="mode__description">계절에 맞춰 업데이트 하는 이벤틑 모드 어쩌구 ~</div>
-    </div>
+    <div class="navigation"><p>플레이모드</p></div>
+    <ul class="modes">
+      <li class="mode">
+        <div><img src="imgs/아케이드모드.png" alt=""></div>
+        <div class="mode__title">아케이드 모드</div>
+        <div>워 모드, 캐쥬얼 모드, 스나이퍼 매치, 극한 매치, 하드코어 모드 등 즐겨보세요</div>
+      </li>
+      <li class="mode">
+        <div><img src="imgs/서바이벌모드.png" alt=""></div>
+        <div class="mode__title">서바이벌 모드</div>
+        <div>팀 데스매치, 서바이벌 모드를 통해 어쩌구 ~</div>
+      </li>
+      <li class="mode">
+        <div><img src="imgs/테마모드.jpeg" alt=""></div>
+        <div class="mode__title">테마 모드</div>
+        <div>계절에 맞춰 업데이트 하는 이벤틑 모드 어쩌구 ~</div>
+      </li>
+    </ul>
   </section>
   <!-- gun -->
   <section id="gun">
-    <div class="navigation">무기 카테고리</div>
+    <h1>무기 카테고리</h1>
+
     <div class="gun__categories">
-      <button class="category__btn">
-        총종류1 <span class="category__count">8</span>
+      <button class="category__btn active">
+        AR<span>6</span>
       </button>
       <button class="category__btn">
-        총종류2 <span class="category__count">8</span>
+        SR <span>4</span>
       </button>
       <button class="category__btn">
-        총종류3 <span class="category__count">8</span>
+        SMG <span>3</span>
       </button>
       <button class="category__btn">
-        총종류4 <span class="category__count">8</span>
+        샷건 <span>4</span>
       </button>
     </div>
 
@@ -202,14 +220,14 @@
       </div>
       
       <div class="description__right">
-        <h3 class="spec__title">무기 스펙</h3>
+        <h2>무기 스펙</h2>
         <div class="spec">
           <div class="spec_description">
             <span>데이지</span>
             <span>30%</span>
           </div>
           <div class="spec__bar">
-            <div class="spec__value"></div>
+            <div class="spec__value" style="width:30%"></div>
           </div>
         </div>
         <div class="spec">
