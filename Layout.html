@@ -74,7 +74,7 @@
     </ul>
     
     <button class="login">
-        LOGIN
+        <a href="sub.html">LOGIN</a> 
     </button>
     <button class="gamestart">
         GAME START
@@ -96,8 +96,6 @@
       
         <button> 무료로 플레이하기</button>
     </div>
-    
-    <!-- 여기 백그라운드 div 를 리스트 div 위에 다른 div 를 줘서 고런 형태로 만들어보기 -->
 
     <div class="main__util">
       <ul class="util__question">
@@ -157,33 +155,23 @@
       <div class="slides_container">
         <ul class="slides">
           <li>
-            <div>
-              태이고<span>1/5</span>
-            </div>
+              태이고
             <img src="imgs/taego.jpeg" alt="태이고 맵 이미지">
           </li>
           <li>
-            <div>
-              사녹<span>2/5</span>
-            </div>
+            사녹
             <img src="imgs/루인스.jpeg" alt="사녹 맵 이미지">
           </li>
           <li>
-            <div>
-              비켄디<span>3/5</span>
-            </div>
+            비켄디
             <img src="imgs/랜드.jpeg" alt="비켄디 맵 이미지">
           </li>
           <li>
-            <div>
-              에란겔<span>4/5</span>
-            </div>
+            에란겔
             <img src="imgs/글라이더.jpeg" alt="에란겔 맵 이미지">
           </li>
           <li>
-            <div>
-              카라킨<span>5/5</span>
-            </div>
+            카라킨
             <img src="imgs/카라킨.jpeg" alt="카라킨 맵 이미지">
           </li>
         </ul>
@@ -195,13 +183,13 @@
       </button>
     </div>
 
-    <!-- <div class="indicator">
-      <a href="" class="active"><i class="fas fa-circle"></i></a>
-      <a href=""><i class="fas fa-circle"></i></a>
-      <a href=""><i class="fas fa-circle"></i></a>
-      <a href=""><i class="fas fa-circle"></i></a>
-      <a href=""><i class="fas fa-circle"></i></a>
-    </div> -->
+    <div class="indicator">
+      <i data-inx="0" class="fas fa-circle active"></i>
+      <i data-inx="1" class="fas fa-circle"></i>
+      <i data-inx="2" class="fas fa-circle"></i>
+      <i data-inx="3" class="fas fa-circle"></i>
+      <i data-inx="4" class="fas fa-circle"></i>
+    </div>
     
   </section>
   <!-- playMode -->
@@ -242,7 +230,7 @@
       </div>
       
       <div class="gun__page">
-        <div class="gun__btns" id='ar' style="display: block;">
+        <div class="gun__btns selected" id='ar'>
           <button>
             AKM
           </button>
