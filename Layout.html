@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css">
   <title>지현UI구현</title>
   <script src="https://kit.fontawesome.com/ccbeef71f1.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+  </script>
 </head>
 <body>
   <!-- navbar -->
@@ -17,7 +19,7 @@
       </a>
     </div>
     <ul class="navbar__menu">
-      <li><a href="">새소식</a>
+      <li ><a href="">새소식</a>
         <ul class="navbar_menu_2">
             <li><a href="">공지사항</a></li>
             <li><a href="">GM소식</a></li>
@@ -64,18 +66,24 @@
       <li><a href="">고객센터</a>
           <ul class="navbar_menu_2">
               <li><a href="">고객센터</a></li>
-              <li><a href="">이용제한 이의신청</a></li>
+              <li><a href="">이용제한</a></li>
+              <li><a href="">이의신청</a></li>
               <li><a href="">보안센터</a></li>
           </ul>
       </li>
     </ul>
-    <div class="navbar__btn">
-      <button class="login">LOGIN</button>
-      <button class="gamestart">GAME START</button>
-    </div>
+    
+    <button class="login">
+        LOGIN
+    </button>
+    <button class="gamestart">
+        GAME START
+    </button>
+    
+    
+    
   </nav>
   <!-- main -->
-  <!-- 여기 백그라운드 div 를 리스트 div 위에 다른 div 를 줘서 고런 형태로 만들어보기 -->
   <section id="main">
     <div class="main__pic">
         <video src="imgs/sample.mp4" autoplay muted loop 
@@ -89,7 +97,8 @@
         <button> 무료로 플레이하기</button>
     </div>
     
-    
+    <!-- 여기 백그라운드 div 를 리스트 div 위에 다른 div 를 줘서 고런 형태로 만들어보기 -->
+
     <div class="main__util">
       <ul class="util__question">
         <li>
@@ -148,40 +157,51 @@
       <div class="slides_container">
         <ul class="slides">
           <li>
-            태이고
+            <div>
+              태이고<span>1/5</span>
+            </div>
             <img src="imgs/taego.jpeg" alt="태이고 맵 이미지">
           </li>
           <li>
-            사녹
-            <img src="imgs/사녹.jpeg" alt="사녹 맵 이미지">
+            <div>
+              사녹<span>2/5</span>
+            </div>
+            <img src="imgs/루인스.jpeg" alt="사녹 맵 이미지">
           </li>
           <li>
-            비켄디
-            <img src="imgs/비켄디.jpeg" alt="비켄디 맵 이미지">
+            <div>
+              비켄디<span>3/5</span>
+            </div>
+            <img src="imgs/랜드.jpeg" alt="비켄디 맵 이미지">
           </li>
           <li>
-            에란겔
-            <img src="imgs/에란겔.jpeg" alt="에란겔 맵 이미지">
+            <div>
+              에란겔<span>4/5</span>
+            </div>
+            <img src="imgs/글라이더.jpeg" alt="에란겔 맵 이미지">
           </li>
           <li>
-            카라킨
+            <div>
+              카라킨<span>5/5</span>
+            </div>
             <img src="imgs/카라킨.jpeg" alt="카라킨 맵 이미지">
           </li>
         </ul>
       </div>
       
       <button class="next">
+        
         <i class="fas fa-chevron-right"></i>
       </button>
     </div>
 
-    <div class="indicator">
+    <!-- <div class="indicator">
       <a href="" class="active"><i class="fas fa-circle"></i></a>
       <a href=""><i class="fas fa-circle"></i></a>
       <a href=""><i class="fas fa-circle"></i></a>
       <a href=""><i class="fas fa-circle"></i></a>
       <a href=""><i class="fas fa-circle"></i></a>
-    </div>
+    </div> -->
     
   </section>
   <!-- playMode -->
@@ -189,101 +209,465 @@
     <div class="navigation"><p>플레이모드</p></div>
     <ul class="modes">
       <li class="mode">
-        <div><img src="imgs/아케이드모드.png" alt=""></div>
+        <div><img src="imgs/풋살.jpeg" alt="아케이드 모드 사진"></div>
         <div class="mode__title">아케이드 모드</div>
         <div>워 모드, 캐쥬얼 모드, 스나이퍼 매치, 극한 매치, 하드코어 모드 등 즐겨보세요</div>
       </li>
       <li class="mode">
-        <div><img src="imgs/서바이벌모드.png" alt=""></div>
+        <div><img src="imgs/좀비.jpeg" alt="서바이벌 모드 사진"></div>
         <div class="mode__title">서바이벌 모드</div>
-        <div>팀 데스매치, 서바이벌 모드를 통해 어쩌구 ~</div>
+        <div>팀 데스매치, 서바이벌 모드를 통해 ~</div>
       </li>
       <li class="mode">
-        <div><img src="imgs/테마모드.jpeg" alt=""></div>
+        <div><img src="imgs/테마모드.jpeg" alt="테마 모드 사진"></div>
         <div class="mode__title">테마 모드</div>
-        <div>계절에 맞춰 업데이트 하는 이벤틑 모드 어쩌구 ~</div>
+        <div>계절에 맞춰 업데이트 하는 이벤트 모드</div>
       </li>
     </ul>
   </section>
   <!-- gun -->
   <section id="gun">
     <h1>무기 카테고리</h1>
-
+    
     <div class="gun__categories">
-      <button class="category__btn active">
-        AR<span>6</span>
-      </button>
-      <button class="category__btn">
-        SR <span>4</span>
-      </button>
-      <button class="category__btn">
-        SMG <span>3</span>
-      </button>
-      <button class="category__btn">
-        샷건 <span></span>
-      </button>
+      <div>
+        <select id="gun_select">
+          <option value="ar">AR</option>
+          <option value="sr">SR</option>
+          <option value="dmr">DMR</option>
+          <option value="sg">ShotGun</option>
+          <option value="smg">SMG</option>
+        </select>
+        <button id="gun_btn">확인</button>
+      </div>
+      
+      <div class="gun__page">
+        <div class="gun__btns" id='ar' style="display: block;">
+          <button>
+            AKM
+          </button>
+          <button>
+            AUG A3
+          </button> 
+          <button>
+            Beryl M762
+          </button>
+          <button>
+            Groza
+          </button>
+          <button class="active">
+            M416
+          </button>
+          <button>
+            M16A4
+          </button>
+          <button>
+            MK47 Mutant
+          </button>
+          <button>
+            QBZ
+          </button>
+          <button>
+            Scar-L
+          </button>
+        </div>
+  
+        <div class="gun__btns" id='sr'>
+          <button>
+            AWM
+          </button>
+          <button>
+            Kar98k
+          </button> 
+          <button>
+            M24
+          </button>
+          <button>
+            Win94
+          </button>
+        </div>
+  
+        <div class="gun__btns" id='dmr'>
+          <button>
+            SLR
+          </button>
+          <button>
+            Mini14
+          </button> 
+          <button>
+            Mk14
+          </button>
+          <button>
+            QBU
+          </button>
+          <button>
+            SKS
+          </button>
+          <button>
+            VSS
+          </button>
+        </div>
+        
+        <div class="gun__btns" id='sg'>
+          <button>
+            S686
+          </button>
+          <button>
+            S12K
+          </button> 
+          <button>
+            S1897
+          </button>
+        </div>
+  
+        <div class="gun__btns" id='smg'>
+          <button>
+            MP5K
+          </button>
+          <button>
+            PP-19 Bizon
+          </button> 
+          <button>
+            Tommy Gun
+          </button>
+          <button>
+            UMP45
+          </button>
+          <button>
+            Micro UZI
+          </button>
+          <button>
+            Vector
+          </button>
+        </div>
+      </div>  
     </div>
 
-    <div class="gun__description">
-
-      <div class="description__left">
-        <div>
-          <img src="imgs/gun.png" alt="총 사진">
-        </div>
-        <div>
-          <span><h2>M416</h2></span><span>5.56mm</span>
+    <div class="gun__total">
+        <!-- Ar M416-->
+      <div class="ar">
+        <div class="gun__container" style="display: block;">
+          <div class="gun__description" id="m416">
+            <div class="description__left">
+              <div>
+                <img src="imgs/gun.png" alt="총 M416 사진">
+              </div>
+              <h2>M416</h2>
+              <div>
+                5.56mm
+              </div>
+            </div>
+            <div class="description__right">
+              <h2>무기 스펙</h2>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>데미지</span>
+                  <span>43</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value" style="width:20%"></div>
+                </div>
+              </div>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>연사력</span>
+                  <span>0.086s</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value" style="width:95%"></div>
+                </div>
+              </div>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>탄속</span>
+                  <span>880m/s</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value"style="width:90%"></div>
+                </div>
+              </div>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>재장전시간</span>
+                  <span>2.1s</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value" style="width:85%"></div>
+                </div>
+              </div>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>사거리</span>
+                  <span>360m</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value"style="width:60%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       
-      <div class="description__right">
-        <h2>무기 스펙</h2>
-        <div class="spec">
-          <div class="spec_description">
-            <span>데이지</span>
-            <span>30%</span>
-          </div>
-          <div class="spec__bar">
-            <div class="spec__value" style="width:30%"></div>
+      <!-- SR -->
+      <!-- SR00 - AWM -->
+      <div class="sr">
+        <div class="gun__container">
+          <div class="gun__description">
+            <div class="description__left">
+              <div>
+                <img src="imgs/AWM.png" alt="총 AWM 사진">
+              </div>
+              <h2>AWM</h2>
+              <div>
+                .300 Magnum
+              </div>
+            </div>
+            <div class="description__right">
+              <h2>무기 스펙</h2>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>데미지</span>
+                  <span>105</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value" style="width:50%"></div>
+                </div>
+              </div>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>연사력</span>
+                  <span>1.85s</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value" style="width:15%"></div>
+                </div>
+              </div>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>탄속</span>
+                  <span>945m/s</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value"style="width:92%"></div>
+                </div>
+              </div>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>재장전시간</span>
+                  <span>4.6s</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value" style="width:50%"></div>
+                </div>
+              </div>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>사거리</span>
+                  <span>650m</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value"style="width:100%"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="spec">
-          <div class="spec_description">
-            <span>연사력</span>
-            <span>90%</span>
-          </div>
-          <div class="spec__bar">
-            <div class="spec__value"></div>
+        
+        <!-- SR01 - Kar98k -->
+        <div class="gun__container">
+          <div class="gun__description">
+            <div class="description__left">
+              <div>
+                <img src="imgs/kar98.png" alt="총 Kar98k 사진">
+              </div>
+              <h2>Kar98k</h2>
+              <div>
+                7.62mm
+              </div>
+            </div>
+            <div class="description__right">
+              <h2>무기 스펙</h2>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>데미지</span>
+                  <span>75</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value" style="width:30%"></div>
+                </div>
+              </div>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>연사력</span>
+                  <span>1.9s</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value" style="width:10%"></div>
+                </div>
+              </div>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>탄속</span>
+                  <span>760m/s</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value"style="width:80%"></div>
+                </div>
+              </div>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>재장전시간</span>
+                  <span>4s</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value" style="width:70%"></div>
+                </div>
+              </div>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>사거리</span>
+                  <span>500m</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value"style="width:80%"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="spec">
-          <div class="spec_description">
-            <span>탄속</span>
-            <span>30%</span>
-          </div>
-          <div class="spec__bar">
-            <div class="spec__value"></div>
+        
+        <!-- SR02 - M24 -->
+        <div class="gun__container">
+          <div class="gun__description">
+            <div class="description__left">
+              <div>
+                <img src="imgs/m24.png" alt="총 M24 사진">
+              </div>
+              <h2>M24</h2>
+              <div>
+                7.62mm
+              </div>
+            </div>
+            <div class="description__right">
+              <h2>무기 스펙</h2>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>데미지</span>
+                  <span>79</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value" style="width:35%"></div>
+                </div>
+              </div>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>연사력</span>
+                  <span>1.8s</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value" style="width:15%"></div>
+                </div>
+              </div>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>탄속</span>
+                  <span>790m/s</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value"style="width:80%"></div>
+                </div>
+              </div>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>재장전시간</span>
+                  <span>4.2s</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value" style="width:60%"></div>
+                </div>
+              </div>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>사거리</span>
+                  <span>600m</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value"style="width:90%"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="spec">
-          <div class="spec_description">
-            <span>재장전시간</span>
-            <span>100%</span>
-          </div>
-          <div class="spec__bar">
-            <div class="spec__value"></div>
-          </div>
-        </div>
-        <div class="spec">
-          <div class="spec_description">
-            <span>사거리</span>
-            <span>20%</span>
-          </div>
-          <div class="spec__bar">
-            <div class="spec__value"></div>
+        
+        <!-- SR03 - Win94 -->
+        <div class="gun__container">
+          <div class="gun__description">
+            <div class="description__left">
+              <div>
+                <img src="imgs/win94.png" alt="총 Win94 사진">
+              </div>
+              <h2>Win94</h2>
+              <div>
+                .45 ACP
+              </div>
+            </div>
+            <div class="description__right">
+              <h2>무기 스펙</h2>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>데미지</span>
+                  <span>66</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value" style="width:25%"></div>
+                </div>
+              </div>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>연사력</span>
+                  <span>0.6s</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value" style="width:70%"></div>
+                </div>
+              </div>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>탄속</span>
+                  <span>760m/s</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value"style="width:75%"></div>
+                </div>
+              </div>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>재장전시간</span>
+                  <span>4s</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value" style="width:65%"></div>
+                </div>
+              </div>
+              <div class="spec">
+                <div class="spec_description">
+                  <span>사거리</span>
+                  <span>500m</span>
+                </div>
+                <div class="spec__bar">
+                  <div class="spec__value"style="width:80%"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    
+    
+    
+
   </section>
   <!-- footer -->
   <footer>
@@ -309,5 +693,7 @@
       </p>
     </div>
   </footer>
+  <script src="javascript.js">
+  </script>
 </body>
 </html>

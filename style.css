@@ -24,7 +24,7 @@
   --font-large: 48px;
   --font-medium: 28px;
   --font-regular: 18px;
-  --font-small: 16px;
+  --font-small: 15px;
   --font-micro: 14px;
 
   /* Font weight */
@@ -63,7 +63,6 @@ h1 {
 
 }
 
-
 h2{
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
@@ -97,13 +96,10 @@ button{
 #navbar{
   display: flex;
   background-color: var(--color-black);
-  align-items: center;
-  padding: 13px 40px;
+  padding: 13px 50px;
   position: fixed;
   z-index: 100;
   width: 100%;
-
-  
 }
 
 
@@ -114,38 +110,78 @@ button{
 
 .navbar__menu a{
   color: var(--color-white);
+}
+
+.navbar__menu>li>a{
+
   font-size: var(--font-regular);
+  
 }
 
 .navbar__menu{
   display: flex;
-  margin-left: 30px;
+  justify-content: space-between;
+  margin-left: 25px;
+  width: 800px;
+  height: 30px;
+  overflow: hidden;
 }
 
 .navbar__menu>li {
-  padding:10px 20px;
+  width: 120px;
+  padding: 10px 0;
+  text-align: center;
 }
 
-.navbar_menu_2{
-  display: none;
+.navbar_menu_2{ 
+  margin-top: 30px;
 }
 
-.navbar__btn{
+
+.navbar__menu:hover {
+  height: 200px;
+  overflow: visible;
+}
+
+/* .navbar__menu>.active .navbar_menu_2{
+  border-top: 1px solid var(--color-yellow);
+} */
+
+.navbar_menu_2 li{
+  margin: 10px 0;
+  font-size: 14.5px;
+}
+
+/* 버튼의 크기 너비를 사전에 정의해주면 되는 거여떠..?
+맞지맞지... 그럼 되겠따..
+그럼 움직일 일도 없고
+그렇다면 움직이는 것은 플렉스 박스와 상관이 없는 일이지 않을까.... */
+
+#navbar button{
+  color: var(--color-orange); 
+  padding: 10px;
+  font-size: var(--font-regular);
+  align-self: start;
+  margin-top: 14px;
+
+}
+
+#navbar button:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-radius: 10px;
+  font-weight: 600 ;
+}
+
+.login {
   margin-left: auto;
 }
 
-.navbar__btn button{
-  font-size: var(--font-regular);
-  color: var(--color-orange);
-  padding: 10px;
-  margin: 0 15px;
+.gamestart{
+  width: 150px;
+  margin-left: 30px;
 }
 
-.navbar__btn button:hover {
-  border: 2px solid var(--color-orange);
-  border-radius: 10px;
-  font-weight: var(--weight-semi-bold);
-}
 
 /* Main */
 
@@ -269,7 +305,9 @@ button{
 .slides{
   width: calc(960*5);
   display: flex;
-  /* position: relative; */
+  position: relative;
+  /* left: -960px; */
+  transition: left 0.5s ease;
   
 }
 
@@ -277,6 +315,16 @@ button{
   width: 960px;
   height: 500px;
   font-size: var(--font-medium);
+}
+
+.slides>li>div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slides span{
+  font-size: var(--font-small);
 }
 
 
@@ -335,7 +383,7 @@ button{
 
 #playModes img{
   width: 300px;
-  height: 300px;
+  height: 280px;
   border-radius: 50%;
   
 }
@@ -391,59 +439,98 @@ button{
   margin-bottom: 50px;
 }
 
+#gun select{
+  width: 150px;
+  padding: .8em .5em;
+  border: 1px solid var(--color-black);
+  font-size: var(--font-regular);
+  margin: 10px;
+}
+
+#gun_btn{
+  width: 70px;
+  background-color: var(--color-light-gray);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 5px;
+  font-size: 16px;
+}
+
+#gun_btn:hover{ 
+  font-weight: var(--weight-semi-bold);
+}
+
 .gun__categories{
-  margin: 10px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
 
 }
-.category__btn{
-  font-size: var(--font-regular);
+
+.gun__page{
+  width: 80%;
+  height: 118px;
+  overflow: hidden;
+}
+
+.gun__btns{
+  display: none;
+}
+
+.gun__btns button{
+  width: 160px;
+  height: 47px;
+  font-size: var(--font-small);
   background-color: var(--color-gray);
-  margin: 0 7px;
+  margin: 6px;
   padding: 15px 35px;
   border-radius: 12px;
 }
 
-.category__btn span{
-  display: none;
-}
 
-.category__btn.active,
-.category__btn:hover{
+.gun__btns button.active,
+.gun__btns button:hover{
   background-color: var(--color-blackbg);
   color: var(--color-white);
   font-weight: var(--weight-semi-bold);
 }
 
+/* GUN DESCRIPTION */
+.gun__container{
+  display: none;
+}
+
+
+
 .gun__description{
   display: flex;
+  height:500px;
   margin: 20px;
 }
 
 .description__left{
-
   border-radius: 30px 0 0 30px;
   background-color: var(--color-orange);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  padding: 30px;
   width: 30%;
 }
 
-.description__left:last-child{
-  text-align: center;
+.description__left>div{
+  margin-bottom: auto;
 }
 
 .gun__description img{
   max-width: 100%;
-  width: auto !important;
-  height: auto !important;
 }
 
 .description__right{
   border-radius: 0 30px 30px 0;
   background-color: var(--color-light-gray);
-  padding: 20px 60px;
+  padding: 60px 100px;
   width: 70%;
 }
 
@@ -460,12 +547,22 @@ button{
 }
 
 .spec__value{
-  height: 3px;
+  height: 5px;
   background-color: var(--color-orange);
 }
 
 .spec{
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.spec_description{
+  display: flex;
+  justify-content: space-between;
+}
+
+.spec_description>span:first-child {
+  font-weight: var(--weight-semi-bold);
+  font-size: var(--font-regular);
 }
 
 /* Footer */
