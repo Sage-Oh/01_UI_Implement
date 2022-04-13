@@ -1,3 +1,5 @@
+
+
 // Map Slide
 var slides = document.querySelector('.slides'),
     slide = document.querySelectorAll('.slides li'),
